@@ -27,8 +27,15 @@ Further reading on ADB can be found here: https://developer.android.com/studio/c
 
 ## Change default launcher
 
-`adb shell pm uninstall -k --user 0 com.google.android.tvlauncher
-adb shell pm uninstall -k --user 0 com.google.android.leanbacklauncher`
+Command to install a launcher manager :
+ - `adb install Apps/LauncherManager.apk`
+
+Install a TV Launcher :
+I recommend Projectivy launcher but any of your choice is fine.
+
+Open Launcher Manager on your Nvidia Shield and choose the new launcher installed. Once done you can safely remove the default TV launcher.
+ - `adb shell pm uninstall -k --user 0 com.google.android.tvlauncher`
+ - `adb shell pm uninstall -k --user 0 com.google.android.leanbacklauncher`
 
 ## Other
 Once in your device's shell, you can use the following command to list installed packages by name.

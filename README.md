@@ -1,10 +1,8 @@
-# Debloat Samsung Phones with Android Debug Bridge (ADB)
+# Debloat Nvidia with Android Debug Bridge (ADB)
 
-This repository contains a list of [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) commands to aggressively bloatware from Samsung Android devices that don't normally display an option to remove them.
+This repository contains a list of [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) commands to aggressively bloatware from Nvidia Android devices that don't normally display an option to remove them.
 
-
-Running all commands listed in [commands.txt](./commands.txt) will disable almost all Samsung apps.
-This includes the Galaxy App Store, Samsung Themes, Samsung Dex, Samsung Bixby, Facebook, and more.
+Running all commands listed in [commands.txt](./commands.txt) will disable almost all Nvidia apps.
 Use at your own risk and read over all commands to make sure you don't take out something you need.
 While these commands cannot harm your device, there may be situations where your phone gets into a crash-loop and the easiest fix is to boot the device into "Recovery Mode" and perform a factory reset.
 
@@ -17,14 +15,15 @@ Further reading on ADB can be found here: https://developer.android.com/studio/c
 1. Install Minimal ADB
 2. On your phone, enable Android's "Developer Options"
 3. In "Developer Options", turn on "USB Debugging"
-4. Connect your Samsung Android phone to your computer with USB debugging enabled. Verify that adb sees your device and the daemon is running with the following command
+4. Connect your Nvidia Shield to your computer with wireless debugging enabled. Verify that adb sees your device and the daemon is running with the following command
+    - adb connect [your-ip-address] 
     - `adb devices`
     - You should see the device name listed as a "device".
     - At this point your device should prompt you to accept USB debugging from your computer. Tap "Allow".
     
-5. Enter your device's shell with the following command
+6. Enter your device's shell with the following command
     - `adb shell`
-6. Once in the device's shell, copy and paste all desired commands from [commands.txt](./commands.txt) to remove the package.
+7. Once in the device's shell, copy and paste all desired commands from [commands.txt](./commands.txt) to remove the package.
 
 ## Other
 Once in your device's shell, you can use the following command to list installed packages by name.

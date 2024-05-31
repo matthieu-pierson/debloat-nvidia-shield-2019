@@ -25,6 +25,11 @@ Further reading on ADB can be found here: https://developer.android.com/studio/c
     - `adb shell`
 7. Once in the device's shell, copy and paste all desired commands from [commands.txt](./commands.txt) to remove the package.
 
+## Change default launcher
+
+`adb shell pm uninstall -k --user 0 com.google.android.tvlauncher
+adb shell pm uninstall -k --user 0 com.google.android.leanbacklauncher`
+
 ## Other
 Once in your device's shell, you can use the following command to list installed packages by name.
  - `pm list package | grep '<package name>'`
@@ -39,4 +44,5 @@ Use :
 For example to reinstall Sound Quality and Effects, 
  - `pm install-existing --user 0 com.sec.android.app.soundalive`
  - `pm install-existing --user 0 com.sec.android.app.myfiles`
+
 
